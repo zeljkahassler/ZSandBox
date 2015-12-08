@@ -1,0 +1,85 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+	background: #930065 url(../images/landscape-blurred.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	.profile-card {
+		margin:100px auto 0 auto;
+		padding: 10px;
+		width: 300px;
+		height: 500px;
+		background: #FFFFFF;
+		-webkit-border-radius: 20px 20px 20px 20px;
+		-moz-border-radius: 20px 20px 20px 20px;
+		border-radius: 20px 20px 20px 20px;
+		
+		.profile-image {
+			width: 300px;
+			-webkit-border-radius: 20px 20px 0px 0px;
+			-moz-border-radius: 20px 20px 0px 0px;
+			border-radius: 20px 20px 0px 0px;
+			overflow:hidden;
+		}
+		
+		.profile-photo {
+			margin-top: -60px;
+			margin-left: 100px;
+			width: 100px;
+			height: 100px; 
+			border: #FFFFFF 3px solid;
+		    border-radius: 50%;
+			
+			overflow:hidden;
+		}
+		
+		.profile-content {
+			
+			h3 {
+				margin-left: 40px;
+				padding: 40px 20px 0px 20px;
+				font-family: 'Pacifico', cursive;
+				font-size: 26px;
+				color: #fd01de;
+			}
+			
+			p {
+				padding: 20px;
+				font-family: 'Karla', sans-serif;
+				font-size: 16px;
+				text-align: center;
+				line-height: 20px;
+				color: #9601eb;
+			}
+			
+			.profile-links {
+				padding: 30px; 
+				margin-left: 40px;
+				.fa {
+					color: #fd01de;
+				}
+				
+				.fa-paper-plane-o {
+					margin-left: 40px;
+				}
+				
+				.fa-cube {
+					margin-left: 40px;
+				}
+			}
+			
+	
+		}
+	}
+}
