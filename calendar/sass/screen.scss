@@ -5,112 +5,136 @@
 
 @import "compass/reset";
 @import "mixins";
+@import "variables";
+
+html, body {
+	height: 100%;
+}
 
 body {
-	@include background-size(cover);
 	margin: 0 auto;
-	padding: 0;
 	height: 100%;
-	background: #930065 url(../images/landscape-blurred.jpg) no-repeat center center fixed; 
+}
+
+#wrapper {
+	float: left;
+	display: inline-block;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-image: url($gradient-image);
 	
-	.profile-card {
-		@include rounded-corners(20px, 20px, 20px, 20px);
-		@include transition(.3s, ease-in-out);
-		margin:50px auto 0 auto;
-		padding: 10px;
+	.calendar {
+		@include rounded-corners(2px, 2px, 2px, 2px);
+		margin: 50px auto;
+		padding: 20px;
 		width: 300px;
-		height: 500px;
+		height: 340px;
 		background: #FFFFFF;
+		font-family: $font-stack;
+		font-size: 16px;
+		text-align: center;
+		line-height: 30px;
+		color: $font-base-color;
 		
-		&:hover {
-			@include box-shadow(1px, 5px, 50px, 30px, rgba(253, 1, 222, 0.3));
-			margin-top:40px;
+		.header {
+			padding: 10px 10px 40px 10px;
+		
+			.day-date {
+				float: left;
 			}
-		
-		.profile-image {
-			@include rounded-corners(20px, 20px, 0, 0);
-			width: 300px;
-			overflow:hidden;
+			
+			.month-year {
+				float: right;
+			}	
 		}
 		
-		.profile-photo {
-			display: block;
-			margin: -60px auto 0 auto;
-			width: 100px;
-			height: 100px; 
-			border: #FFFFFF 3px solid;
-		    border-radius: 50%;
-			overflow:hidden;
+		
+		.weekdays {
+			padding-left: 7px;
 		}
 		
-		.profile-content {
-			
-			h3 {
-				display: block;
-				position: relative;
-				left: 50%;
-				margin-left: -110px; 
-				padding: 40px 20px 0px 20px;
-				font-family: 'Pacifico', cursive;
-				font-size: 26px;
-				color: #fd01de;
-			}
-			
-			p {
-				padding: 20px;
-				font-family: 'Karla', sans-serif;
-				font-size: 16px;
-				text-align: center;
-				line-height: 20px;
-				color: #9601eb;
-			}
-			
-			.profile-links {
-				display: block;
-				margin: 20px auto 0 auto; 
-				
-				.fa {
-					color: #fd01de;
-				}
-				
-				.fa-cube {
-					@include transition(.3s, ease-in-out);
-					margin-left: 18%;
-					
-					&:hover {
-						color: #C900C5;
-						-webkit-transform: scale(1.2);
-						transform: scale(1.2);
-						cursor:pointer;
-					}
-				}
-				
-				.fa-paper-plane-o {
-					@include transition(.3s, ease-in-out);
-					margin-left: 18%;
-					
-					&:hover {
-						color: #C900C5;
-						-webkit-transform: scale(1.2);
-						transform: scale(1.2);
-						cursor:pointer;
-					}
-				}
-				
-				.fa-scissors {
-					@include transition(.3s, ease-in-out);
-					margin-left: 20%;
-					
-					&:hover {
-						color: #C900C5;
-						-webkit-transform: scale(1.2);
-						transform: scale(1.2);
-						cursor:pointer;
-					}
-				}
-			}
-			
+		.dates {
+			padding-left: 7px;
+			clear:both;
+		}
 	
+		.day-of-week {
+			color: #9C9C9C;
+			font-size: 13px;
+			text-transform:uppercase;
+		}
+		
+		span {
+			float: left;
+			padding: 5px;
+			width: 30px;
+			height: 30px;
+		}
+		
+		.first {
+			clear: left;
+		}
+		
+		.previous-month {
+			color: #DCDCDC;
+		}
+		
+		.birthday {
+			border-radius: 50%;
+			background: #FF008B;
+			color: #FFFFFF;
+		}
+		
+		.with-event {
+			border-radius: 50%;
+			border: #C100FF 2px solid;
+			width: 27px;
+			height: 27px;
+		}
+		
+		.event-number {
+			margin-left: -17px;
+			margin-top: -4px;
+			border-radius: 50%;
+			background: #C100FF;
+			color: #FFFFFF;
+			font-size: 9px;
+			width: 7px;
+			height: 7px;
+			line-height: 7px;
+		}
+		
+		.footer {
+			padding: 10px 10px 10px 10px;
+			font-size: 12px;
+			font-weight: 700;
+			color: #9A9A9A;
+					
+			.time {
+				float: left;
+				padding: 5px 20px 0 0;
+			}
+			
+			.add-event {
+				position: relative;
+				left: 67px;
+				float: left;
+				width: 34px;
+				height: 34px;
+				padding: 0;
+				font-size: 30px;
+				font-weight: 700;
+				color: #FF7F00;
+				border-radius: 50%;
+				border: #FF7F00 2px solid;
+			}
+			
+			.weather {
+				float: right;
+				padding: 5px 0 0 0;
+			}
 		}
 	}
 }

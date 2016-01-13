@@ -1,0 +1,30 @@
+/* Zeljka's mixins */
+
+@mixin box-shadow($top, $left, $blur, $spread, $color) {
+  -webkit-box-shadow: $top $left $blur $spread $color;
+  -moz-box-shadow: $top $left $blur $spread $color;
+  box-shadow: $top $left $blur $spread $color;
+}
+
+@mixin rounded-corners($tl, $tr, $br, $bl) {
+  -webkit-border-radius:$tl $tr $br $bl;
+  -moz-border-radius:$tl $tr $br $bl;
+  -o-border-radius:$tl $tr $br $bl;
+  border-radius:$tl $tr $br $bl;
+}
+
+@mixin transition($var...) {
+  	-webkit-transition: $var;
+  	transition: $var;
+}
+
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+}
+
+@mixin background-size($cover) {
+	-webkit-background-size: $cover;
+	-moz-background-size: $cover;
+	-o-background-size: $cover;
+	background-size: $cover;
+}
